@@ -1,0 +1,121 @@
+$weights: 300, 400, 500, 600, 700, 800, 900;
+$p-font: "Rubik", sans-serif;
+$p-font-size: 300;
+
+@each $weight in $weights {
+  .rubik-#{$weight} {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+  }
+}
+
+body  {
+    background-image: repeating-linear-gradient(90deg, rgb(30, 30, 30) 0px, rgb(30, 30, 30) 42px,rgb(32, 32, 32) 42px, rgb(32, 32, 32) 84px,rgb(33, 33, 33) 84px, rgb(33, 33, 33) 126px,rgb(31, 31, 31) 126px, rgb(31, 31, 31) 168px,rgb(31, 31, 31) 168px, rgb(31, 31, 31) 210px,rgb(32, 32, 32) 210px, rgb(32, 32, 32) 252px,rgb(34, 34, 34) 252px, rgb(34, 34, 34) 294px,rgb(33, 33, 33) 294px, rgb(33, 33, 33) 336px);
+}    
+
+.main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2fr for .container, 1fr for .display-container */
+    gap: 20px; /* Optional: Adds some space between the two containers */
+  }
+
+.container {
+    background-color: #141414;
+    border-radius: 20px;
+    padding: 20, 100, 20, 100px;
+    color: white; /* To make text visible against the black background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 40%;
+  }
+  
+  .display-container {
+    background-color: #141414;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
+  .input-field,
+  .textarea-field {
+    margin: 0px 3;
+    width: 100%;
+    resize: vertical;
+    
+  }
+
+  h2 {
+    color: #fff;
+    margin-bottom: 5px;
+    
+  }
+
+  
+
+  .submit-button {
+    margin-top: 20px; /* Adjust this value as needed */
+  }
+
+  .error {
+    color: red;
+  }
+ 
+p {
+  font-family: $p-font;
+  font-size: $p-font-size;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.delete-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.delete-button {
+  border-radius: 25%;
+  color: red;
+}
+
+.selected-post-container {
+  padding: 20px;
+  background-color: #141414;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected-post-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.delete-container h2 {
+  cursor: pointer;
+  
+}
+
+.delete-container h2:hover {
+  color: #007BFF; /* Change this to the color you want when hovering */
+}
